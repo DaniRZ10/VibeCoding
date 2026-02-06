@@ -2,7 +2,8 @@
     --bg-color: #0a0a0a;
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
-    --accent-green: #00ff41; /* Neo-Matrix Green */
+    --accent-green: #00ff41;
+    /* Neo-Matrix Green */
     --accent-red: #ff3333;
     --card-bg: rgba(255, 255, 255, 0.05);
     --card-border: rgba(255, 255, 255, 0.1);
@@ -68,8 +69,13 @@ body {
 }
 
 @keyframes float {
-    from { transform: translate(0, 0); }
-    to { transform: translate(50px, 30px); }
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(50px, 30px);
+    }
 }
 
 /* Typography & Hero */
@@ -88,6 +94,7 @@ h1 {
 .highlight {
     background: linear-gradient(120deg, var(--accent-green), #4a90e2);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -164,9 +171,11 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4px; /* Left colored bar */
+    width: 4px;
+    /* Left colored bar */
     height: 100%;
-    background: var(--accent-green); /* Default, changes via JS */
+    background: var(--accent-green);
+    /* Default, changes via JS */
 }
 
 .model-name {
@@ -183,7 +192,7 @@ h1 {
     margin-bottom: 1.5rem;
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
 }
 
@@ -211,20 +220,35 @@ h1 {
 }
 
 /* Consumption Color Classes (Applied by JS) */
-.low-consumption .energy-value { color: var(--accent-green); }
-.low-consumption::before { background: var(--accent-green); }
+.low-consumption .energy-value {
+    color: var(--accent-green);
+}
 
-.med-consumption .energy-value { color: #ffe600; }
-.med-consumption::before { background: #ffe600; }
+.low-consumption::before {
+    background: var(--accent-green);
+}
 
-.high-consumption .energy-value { color: var(--accent-red); }
-.high-consumption::before { background: var(--accent-red); }
+.med-consumption .energy-value {
+    color: #ffe600;
+}
+
+.med-consumption::before {
+    background: #ffe600;
+}
+
+.high-consumption .energy-value {
+    color: var(--accent-red);
+}
+
+.high-consumption::before {
+    background: var(--accent-red);
+}
 
 
 .methodology {
     margin-top: 5rem;
     padding: 2rem;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     font-size: 0.9rem;
     color: #666;
@@ -244,16 +268,36 @@ footer {
     animation: fadeIn 0.8s ease forwards;
 }
 
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
 
 @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    .controls { flex-direction: column; align-items: flex-start; }
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
